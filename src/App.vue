@@ -1,11 +1,15 @@
 <script setup lang="ts">
 import { RouterView } from "vue-router"
 import AppHeader from "@/components/ui/AppHeader.vue"
+import AppFooter from "@/components/ui/AppFooter.vue"
 </script>
 
 <template>
-    <div class="box-border bg-gray-100 min-h-screen container mx-auto 2xl">
+    <div class="h-screen grid grid-rows-layout content-between">
         <AppHeader />
-        <RouterView />
+        <div class="max-w-screen-2xl mx-auto">
+            <RouterView />
+        </div>
+        <AppFooter />
     </div>
 </template>
