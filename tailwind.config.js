@@ -5,7 +5,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                main: ["EB Garamond"]
+                main: ["Oswald"]
             }
         }
     },
