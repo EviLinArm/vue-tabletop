@@ -1,11 +1,11 @@
 <template>
     <AppHero :heroData="startData" />
-    <div>
+    <div class="mt-4">
         <div class="flex justify-between">
-            <p class="font-medium text-5xl">ЧТО НУЖНО ДЕЛАТЬ?</p>
+            <p class="font-medium text-2xl md:text-3xl lg:text-4xl xl:text-5xl">ЧТО НУЖНО ДЕЛАТЬ?</p>
         </div>
         <div class="flex flex-col justify-between align-middle font-light mt-6">
-            <p class="font-semibold text-3xl">КУПИТЬ ИГРУ</p>
+            <p class="font-semibold text-lg md:text-xl lg:text-2xl xl:text-3xl">КУПИТЬ ИГРУ</p>
             <p class="mt-2.5 text-xl">
                 Приобретите ключ игры на площадке
                 <a
@@ -25,7 +25,7 @@
             </p>
         </div>
         <div class="flex flex-col justify-between align-middle font-light mt-6">
-            <p class="font-semibold text-3xl">ВСТУПИТЬ В DISCORD</p>
+            <p class="font-semibold text-lg md:text-xl lg:text-2xl xl:text-3xl">ВСТУПИТЬ В DISCORD</p>
             <p class="mt-2.5 text-xl">Друзья есть? - Делайте свой Discord сервер и ни в чем себе не отказывайте.</p>
             <p class="mt-2.5 text-xl">
                 Вы мой друг? -
@@ -48,7 +48,7 @@
             </p>
         </div>
         <div class="flex flex-col justify-between align-middle font-light mt-6">
-            <p class="font-semibold text-3xl">ПОДПИСАТЬСЯ НА ИГРУ</p>
+            <p class="font-semibold text-lg md:text-xl lg:text-2xl xl:text-3xl">ПОДПИСАТЬСЯ НА ИГРУ</p>
             <p class="mt-2.5 text-xl">
                 Переходите в
                 <RouterLink class="active:text-sky-800 hover:text-sky-900 transition-all text-sky-700" to="/"
@@ -57,7 +57,7 @@
             </p>
         </div>
         <div class="flex flex-col justify-between align-middle font-light mt-6">
-            <p class="font-semibold text-3xl">НАЧАТЬ ИГРАТЬ</p>
+            <p class="font-semibold text-lg md:text-xl lg:text-2xl xl:text-3xl">НАЧАТЬ ИГРАТЬ</p>
             <p class="mt-2.5 text-xl">
                 Запускайте TableTop Simulator, <strong> первый запуск игры всегда происходит с вылетом</strong>, поэтому
                 сразу перезапускайте.
@@ -80,7 +80,7 @@ const startData = {
         "С Tabletop simulator можно в них поиграть не важно есть у вас друзья или нет.",
         "Просто читайте и повторяйте инструкцию ниже."
     ],
-    image: ["../assets/startImage.png"],
+    image: ["src/assets/startImage.png"],
     buttonText: {
         text: "КАТАЛОГ НАСТОЛОК",
         link: "/"
