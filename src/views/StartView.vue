@@ -7,26 +7,53 @@
         <div class="flex flex-col justify-between align-middle font-light mt-6">
             <p class="font-semibold text-3xl">КУПИТЬ ИГРУ</p>
             <p class="mt-2.5 text-xl">
-                Приобретите ключ игры на площадке <a href="/#" target="_blank">Plati.ru</a> либо в самом
-                <a href="/#" target="_blank">Steam</a> (если сейчас там распродажа)
+                Приобретите ключ игры на площадке
+                <a
+                    class="active:text-sky-800 hover:text-sky-900 transition-all text-sky-700"
+                    href="https://plati.market/itm/2594768"
+                    target="_blank"
+                    >Plati.ru</a
+                >
+                либо в самом
+                <a
+                    class="active:text-sky-800 hover:text-sky-900 transition-all text-sky-700"
+                    href="https://store.steampowered.com/app/286160/Tabletop_Simulator/"
+                    target="_blank"
+                    >Steam</a
+                >
+                (если сейчас там распродажа)
             </p>
         </div>
         <div class="flex flex-col justify-between align-middle font-light mt-6">
             <p class="font-semibold text-3xl">ВСТУПИТЬ В DISCORD</p>
             <p class="mt-2.5 text-xl">Друзья есть? - Делайте свой Discord сервер и ни в чем себе не отказывайте.</p>
             <p class="mt-2.5 text-xl">
-                Вы мой друг? - <a href="/#" target="_blank">Добавляйтесь в друзья</a> в Discord и играйте вместе со
-                мной.
+                Вы мой друг? -
+                <a
+                    class="active:text-sky-800 hover:text-sky-900 transition-all text-sky-700"
+                    href="https://discordapp.com/users/403436810916855848"
+                    target="_blank"
+                    >Добавляйтесь в друзья</a
+                >
+                в Discord и играйте вместе со мной.
             </p>
             <p class="mt-2.5 text-xl">
-                Если у вас нет друзей? - Вступайте в Discord сообщество <a href="/#" target="_blank">NINRI</a>.
+                Если у вас нет друзей? - Вступайте в Discord сообщество
+                <a
+                    class="active:text-sky-800 hover:text-sky-900 transition-all text-sky-700"
+                    href="https://discord.gg/ninri"
+                    target="_blank"
+                    >NINRI</a
+                >.
             </p>
         </div>
         <div class="flex flex-col justify-between align-middle font-light mt-6">
             <p class="font-semibold text-3xl">ПОДПИСАТЬСЯ НА ИГРУ</p>
             <p class="mt-2.5 text-xl">
-                Переходите в <a href="/#" target="_blank">Каталог настолок</a>, выбирайте игру которая понравилась,
-                кликайте по ссылке Мастерская Steam и подписывайтесь на игру.
+                Переходите в
+                <RouterLink class="active:text-sky-800 hover:text-sky-900 transition-all text-sky-700" to="/"
+                    >Каталог настолок</RouterLink
+                >, выбирайте игру которая понравилась, кликайте по ссылке Мастерская Steam и подписывайтесь на игру.
             </p>
         </div>
         <div class="flex flex-col justify-between align-middle font-light mt-6">
@@ -53,7 +80,7 @@ const startData = {
         "С Tabletop simulator можно в них поиграть не важно есть у вас друзья или нет.",
         "Просто читайте и повторяйте инструкцию ниже."
     ],
-    image: ["src/assets/startImage.png"],
+    image: ["../assets/startImage.png"],
     buttonText: {
         text: "КАТАЛОГ НАСТОЛОК",
         link: "/"

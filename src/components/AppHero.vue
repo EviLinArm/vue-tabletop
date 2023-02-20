@@ -1,7 +1,7 @@
 <template>
     <div class="flex h-[30rem]">
         <div class="w-3/5">
-            <div class="font-semibold text-7xl mb-10">
+            <div class="font-semibold text-6xl mb-10">
                 <p v-for="text in props.heroData.title" :key="text" class="mb-3.5 last:mb-0">{{ text }}</p>
             </div>
             <div class="text-3xl font-light mb-10">
@@ -17,7 +17,6 @@
 import AppButton from "@/components/ui/AppButton.vue"
 
 const props = defineProps(["heroData"])
-console.log(props.heroData)
 </script>
 
 <style scoped></style>
