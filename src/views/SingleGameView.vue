@@ -1,8 +1,5 @@
 <template>
-    <pre>
-        error: {{ error }}
-    </pre>
-
+    <div class="text-center text-sky-700">Ошибка: {{ error }}</div>
     <AppPreloader class="h-full" v-if="fetching" />
     <AppPreloader class="h-full" v-else-if="error" />
     <div class="h-full" v-else>

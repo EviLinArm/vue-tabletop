@@ -26,16 +26,32 @@ const useGamesStore = defineStore("games", () => {
     // eslint-disable-next-line vue/return-in-computed-property
     const filteredGamesData = computed(() => {
         // eslint-disable-next-line no-constant-condition
+        if (filterValue.value === "") {
+            return [...gamesData.value]
+        }
         if (filterValue.value === "" || filterValue.value === "name") {
             // @ts-ignore
-            return [...gamesData.value].sort((game1, game2) => game1[filterValue.value]?.toString().localeCompare(game2[filterValue.value].toString()))
+            // return [...gamesData.value].sort((game1, game2) => game1[filterValue.value]?.toString().localeCompare(game2[filterValue.value].toString()))
+            return [...gamesData.value].sort((game1, game2) => {
+                const nameA = game1.name.toUpperCase()
+                const nameB = game2.name.toUpperCase()
+                if (nameA < nameB) {
+                    return -1
+                }
+                if (nameA > nameB) {
+                    return 1
+                }
+                return 0
+            })
         }
         // eslint-disable-next-line no-constant-condition
         if (filterValue.value === "time" || filterValue.value === "person" || filterValue.value === "ageLimit") {
             const compareNumeric = (a: any, b: any) => {
-                if (+a[filterValue.value] > +b[filterValue.value]) return 1
-                if (+a[filterValue.value] === +b[filterValue.value]) return 0
-                if (+a[filterValue.value] < +b[filterValue.value]) return -1
+                const nameA = +a[filterValue.value]
+                const nameB = +b[filterValue.value]
+                if (nameA > nameB) return 1
+                if (nameA === nameB) return 0
+                if (nameA < nameB) return -1
             }
             // @ts-ignore
             return [...gamesData.value].sort(compareNumeric)
@@ -46,12 +62,7 @@ const useGamesStore = defineStore("games", () => {
         // @ts-ignore
         return filteredGamesData.value.filter((game) => {
             // @ts-ignore
-            if (game.name) {
-                // @ts-ignore
-                return game.name.toLowerCase().includes(filterText.value.toLowerCase())
-            } else {
-                return filteredGamesData
-            }
+            return game?.name.toLowerCase().includes(filterText.value.toLowerCase())
         })
     })
 
