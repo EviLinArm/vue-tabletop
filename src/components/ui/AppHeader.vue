@@ -12,8 +12,11 @@
                     <li class="mr-2 md:mr-4 lg:mr-6 xl:mr-10 transition-all hover:text-sky-600 active:text-sky-800">
                         <a href="https://plati.market/itm/2594768" target="_blank">ГДЕ КУПИТЬ</a>
                     </li>
-                    <li class="md:mr-4 xl:mr-10 transition-all hover:text-sky-600 active:text-sky-800">
-                        <RouterLink to="/">СЛУЧАЙНАЯ ИГРА</RouterLink>
+                    <li
+                        @click="randomGameLink"
+                        class="md:mr-4 xl:mr-10 transition-all hover:text-sky-600 active:text-sky-800"
+                    >
+                        <span>СЛУЧАЙНАЯ ИГРА</span>
                     </li>
                 </ul>
             </div>
@@ -21,13 +24,29 @@
     </div>
 </template>
 
-<script>
-import { defineComponent } from "vue"
+<script setup>
+import useGamesStore from "@/stores/games"
 import DiceIcon from "@/assets/icons/DiceIcon.vue"
+import { useRouter } from "vue-router"
 
-export default defineComponent({
-    components: { DiceIcon }
-})
+const gameStore = useGamesStore()
+const router = useRouter()
+
+const randomGameLink = async () => {
+    const randomNumber = (arr) => {
+        const min = 0
+        const max = arr.length - 1
+        return Math.floor(Math.random() * (max - min + 1) + min)
+    }
+    const gameNum = randomNumber(gameStore.gamesData)
+
+    if (gameStore.gamesData.length) {
+        await router.push(`/game/${gameStore.gamesData[gameNum].id}`)
+    } else {
+        await gameStore.getGamesData()
+        await router.push(`/game/${gameStore.gamesData[gameNum].id}`)
+    }
+}
 </script>
 
 <style scoped></style>
