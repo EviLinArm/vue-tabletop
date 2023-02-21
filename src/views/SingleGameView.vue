@@ -1,7 +1,9 @@
 <template>
-    <div class="text-center text-sky-700">Ошибка: {{ error }}</div>
-    <AppPreloader class="h-full" v-if="fetching" />
-    <AppPreloader class="h-full" v-else-if="error" />
+    <template v-if="error">
+        <div v-if="error" class="text-center text-sky-700">Ошибка: {{ error }}</div>
+        <AppPreloader class="h-full" />
+    </template>
+    <AppPreloader class="h-full" v-else-if="fetching" />
     <div class="h-full" v-else>
         <div>
             <p
