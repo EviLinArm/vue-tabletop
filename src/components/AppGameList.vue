@@ -29,13 +29,18 @@
                 </select>
             </div>
         </div>
-        <div
-            class="mt-3 md:mt-4 lg:mt-5 xl:mt-6 grid grid-cols-1 gap-y-3.5 md:grid-cols-2 md:gap-y-3 md:gap-x-2 lg:grid-cols-3 lg:gap-y-4 lg:gap-x-3 xl:grid-cols-4 xl:gap-x-6 xl:gap-y-6"
-        >
-            <transition-group name="card_game">
-                <CardGame v-for="game in props.gameData" :game="game" :key="game.id" />
-            </transition-group>
-        </div>
+        <template v-if="props.gameData.length > 0">
+            <div
+                class="mt-3 md:mt-4 lg:mt-5 xl:mt-6 grid grid-cols-1 gap-y-3.5 md:grid-cols-2 md:gap-y-3 md:gap-x-2 lg:grid-cols-3 lg:gap-y-4 lg:gap-x-3 xl:grid-cols-4 xl:gap-x-6 xl:gap-y-6"
+            >
+                <transition-group name="card_game">
+                    <CardGame v-for="game in props.gameData" :game="game" :key="game.id" />
+                </transition-group>
+            </div>
+        </template>
+        <template v-else>
+            <p class="text-center text-sky-700 font-medium text-1xl md:text-2xl lg:text-3xl xl:text-4xl">Игр не найдено...</p>
+        </template>
     </div>
 </template>
 

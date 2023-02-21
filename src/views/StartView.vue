@@ -80,7 +80,7 @@ const startData = {
         "С Tabletop simulator можно в них поиграть не важно есть у вас друзья или нет.",
         "Читайте инструкцию ниже и просто выполняйте."
     ],
-    image: ["src/assets/startImage.png"],
+    image: ["../assets/startImage.png"],
     buttonText: {
         text: "КАТАЛОГ НАСТОЛОК",
         link: "/"

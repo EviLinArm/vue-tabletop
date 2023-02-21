@@ -12,7 +12,7 @@ const heroData = {
         "Любите настольные игры, но желания выходить из дома нет?",
         "Тогда вам в помощь полноценный эмулятор настолок с кучей электронных копий обожаемых игр."
     ],
-    image: ["src/assets/heroImage.png"],
+    image: ["../assets/heroImage.png"],
     buttonText: {
         text: "НАЧАТЬ ИГРАТЬ!",
         link: "/start"

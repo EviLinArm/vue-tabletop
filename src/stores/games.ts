@@ -29,12 +29,14 @@ const useGamesStore = defineStore("games", () => {
         if (filterValue.value === "") {
             return [...gamesData.value]
         }
-        if (filterValue.value === "" || filterValue.value === "name") {
+        if (filterValue.value === "name") {
             // @ts-ignore
             // return [...gamesData.value].sort((game1, game2) => game1[filterValue.value]?.toString().localeCompare(game2[filterValue.value].toString()))
-            return [...gamesData.value].sort((game1, game2) => {
-                const nameA = game1.name.toUpperCase()
-                const nameB = game2.name.toUpperCase()
+            return [...gamesData.value].sort((a, b) => {
+                // @ts-ignore
+                const nameA = a[filterValue.value].toUpperCase()
+                // @ts-ignore
+                const nameB = b[filterValue.value].toUpperCase()
                 if (nameA < nameB) {
                     return -1
                 }

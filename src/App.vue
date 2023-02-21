@@ -2,6 +2,7 @@
 import { RouterView } from "vue-router"
 import AppHeader from "@/components/ui/AppHeader.vue"
 
+//TODO: Сделать отбивку если в списке после фильтра пусто
 //TODO: Фановая страница с "броском" кубика
 //TODO: Добавить typescript
 //TODO: Писать бэк \ делать ЛК клиента
