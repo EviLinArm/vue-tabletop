@@ -1,7 +1,7 @@
 <template>
-    <div class="flex flex-col-reverse lg:h-[28rem] xl:h-[35rem] lg:flex-row">
+    <div class="flex flex-col-reverse md:h-[25rem] lg:h-[30rem] xl:h-[36rem] lg:flex-row">
         <div class="w-full lg:w-3/5">
-            <div class="font-semibold text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-4 md:mb-6 lg:mb-8 xl:mb-10">
+            <div class="font-semibold text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-4 md:mb-6 lg:mb-8 xl:mb-10">
                 <p v-for="text in props.heroData.title" :key="text" class="mb-1 md:mb-1.5 lg:mb-3 xl:mb-3.5 last:mb-0">
                     {{ text }}
                 </p>

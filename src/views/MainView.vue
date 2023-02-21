@@ -26,6 +26,6 @@ onMounted(async () => {
 
 <template>
     <AppHero :heroData="heroData" />
-    <AppGameList :gameData="gameStore.filteredAndSelectedGamesData" v-if="!gameStore.loader" class="mt-6" />
+    <AppGameList :gameData="gameStore.filteredAndSelectedGamesData" v-if="!gameStore.loader" class="mt-3 md:mt-4 lg:mt-7 xl:mt-8" />
     <AppPreloader v-else />
 </template>
