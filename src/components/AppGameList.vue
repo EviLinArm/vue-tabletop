@@ -19,7 +19,7 @@
                 <select
                     :value="gameStore.filterValue"
                     @change="gameStore.setFilterValue($event.target.value)"
-                    class="outline-0 text-end w-18 lg:w-24 text-stone-800 appearance-none"
+                    class="outline-0 text-center w-24 lg:w-32 text-stone-800 appearance-none bg-white"
                 >
                     <option value="" disabled>По умолчанию</option>
                     <option value="time">Время игры</option>

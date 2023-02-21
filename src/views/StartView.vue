@@ -59,7 +59,7 @@
         <div class="flex flex-col justify-between align-middle font-light mt-6">
             <p class="font-semibold text-lg md:text-xl lg:text-2xl xl:text-3xl">НАЧАТЬ ИГРАТЬ</p>
             <p class="mt-2.5 text-xl">
-                Запускайте TableTop Simulator, <strong> первый запуск игры всегда происходит с вылетом</strong>, поэтому
+                Запускайте TableTop Simulator, <strong>первый запуск игры всегда происходит с вылетом</strong>, поэтому
                 сразу перезапускайте.
             </p>
             <p class="mt-2.5 text-xl">

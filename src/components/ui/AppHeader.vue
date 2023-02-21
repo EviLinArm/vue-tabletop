@@ -14,7 +14,7 @@
                     </li>
                     <li
                         @click="randomGameLink"
-                        class="md:mr-4 xl:mr-10 transition-all hover:text-sky-600 active:text-sky-800"
+                        class="cursor-pointer md:mr-4 xl:mr-10 transition-all hover:text-sky-600 active:text-sky-800"
                     >
                         <span>СЛУЧАЙНАЯ ИГРА</span>
                     </li>
